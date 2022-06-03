@@ -42,13 +42,71 @@ Ingrese a los security Groups de su cuenta a través del menú desplegable de la
 
  2. En el banner de la izquierda seleccione la pestaña ```Assigned Instances``` y seleccione las interfaces públicas y privadas de los nodos del clúster donde tiene desplegados sus servicios.
 
- 3. Ingrese a <a href="https://api.cis.cloud.ibm.com/v1/ips"> https://api.cis.cloud.ibm.com/v1/ips</a>
+ <br />
+<p align="center"><img width="900" src="https://github.com/emeloibmco/IBM-Cloud-Internet-Services-Security-Groups/blob/main/Images/asignar-instancias.png"></p>
+<br />
+
+ 3. Ingrese a <a href="https://api.cis.cloud.ibm.com/v1/ips"> https://api.cis.cloud.ibm.com/v1/ips</a> estas IPs se usarán en el próximo numeral.
+
+ 4. Nuevamente en IBM Cloud, en el banner de la izquierda seleccione la pestaña ```Rules```, en la sección ```Inbound Rules```, para cada IPv4 de la lista encontrada en el link del numeral 3 dé clic en el botón ```Add Rule``` y complete los campos de la siguiente forma:
+
+    * ```IP type```: IPv4 
+    * ```Protocol```: TCP
+    * ```Port Range```: 80 - 80
+    * ```Source type```: CIDR Block
+    * ```Source```: Ingrese la IP correspondiente
+    </br>
+
+ **Security Group para tráfico de entrada de kubernetes**
+ 
+ 1. Dé clic en crear y asigne el nombre de su preferencia, por ejemplo ```allow_k8_traffic```, este security group se encargará de permitir el acceso de las IP públicas pertenecientes a la región en la que se ubica el clúster.
+
+ 2. En el banner de la izquierda seleccione la pestaña ```Assigned Instances``` y seleccione las interfaces públicas y privadas de los nodos del clúster donde tiene desplegados sus servicios.
+
+ 3. Ingrese a <a href="https://cloud.ibm.com/docs/containers?topic=containers-firewall#master_ips"> https://cloud.ibm.com/docs/containers?topic=containers-firewall#master_ips</a> estas IPs se usarán en el próximo numeral.
+
+ 4. Nuevamente en IBM Cloud, en el banner de la izquierda seleccione la pestaña ```Rules```, en la sección ```Inbound Rules```, para cada IP pública de la región correspondiente a su clúster, encontrada en el link del numeral 3, dé clic en el botón ```Add Rule``` y complete los campos de la siguiente forma:
+
+    * ```IP type```: IPv4 
+    * ```Protocol```: TCP
+    * ```Port Range```: 30000 - 32767
+    * ```Source type```: CIDR Block
+    * ```Source```: Ingrese la IP correspondiente
+    </br>
+
+    Para cada IP repita el procedimiento con el rango de puertos ```443 - 443```
+
+ **Security Group para tráfico de salida de kubernetes**
+ 
+ 1. Dé clic en crear y asigne el nombre de su preferencia, por ejemplo ```allow_outbound_k8```, este security group se encargará de permitir el tráfico de salida del clúster.
+
+ 2. En el banner de la izquierda seleccione la pestaña ```Assigned Instances``` y seleccione las interfaces públicas y privadas de los nodos del clúster donde tiene desplegados sus servicios.
+
+ 4. En el banner de la izquierda seleccione la pestaña ```Rules```, en la sección ```Outbound Rules```, dé clic en el botón ```Add Rule``` y complete los campos de la siguiente forma:
+
+    * ```IP type```: IPv4 
+    * ```Protocol```: Any
+    * ```Port Range```: Any
+    * ```Source type```: CIDR Block
+    * ```Destination```: 0.0.0.0/0
+    </br>
+    
+    Nuevamente dé clic en el botón ```Add Rule``` y complete los campos de la siguiente forma:
+
+    * ```IP type```: IPv6
+    * ```Protocol```: TCP
+    * ```Port Range```: Any
+    * ```Source type```: CIDR Block
+    * ```Destination```: ::/0
+    </br>
 
 
 
 
 ## Referencias :mag:
 * <a href="https://www.ibm.com/cloud/blog/network-security-groups"> IBM Cloud Security Groups</a>
+
+* <a href="https://cloud.ibm.com/docs/containers?topic=containers-firewall"> Classic: Opening required ports and IP addresses in your firewall</a>
 
 
 <br />
