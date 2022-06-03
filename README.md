@@ -29,7 +29,7 @@ Ingrese a su instancia de *IBM® Cloud Internet Services* y acceda a la pestaña
 Dé clic en crear y posteriormente active la opción de ```Proxy``` para habilitar el tráfico a través de CIS y aplicar las normas que serán agregadas a los security groups
 
 <br />
-<p align="center"><img width="900" src="https://github.com/emeloibmco/IBM-Cloud-Internet-services-Security-Groups/DNSsubdominio"></p>
+<p align="center"><img width="900" src="https://github.com/emeloibmco/IBM-Cloud-Internet-Services-Security-Groups/blob/main/Images/DNSsubdominio.png"></p>
 <br />
 
 ## Configuración de Security Groups
