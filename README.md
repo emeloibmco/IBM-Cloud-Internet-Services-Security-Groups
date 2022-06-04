@@ -107,6 +107,9 @@ Ingrese a los security Groups de su cuenta a través del menú desplegable de la
 
 Finalmente, para aplicar las reglas establecidas en los security groups, ingrese al menú desplegable de la izquierda y acceda a su clúster de kubernetes, en el menú de la izquierda dé clic en ```Worker Nodes``` y seleccione todos los nodos de su clúster, finalmente, dé clic en ```Reboot``` para reiniciar los nodos del clúster y aplicar las reglas incluidas en los security groups.
 
+<br />
+<p align="center"><img width="600" src="https://github.com/emeloibmco/IBM-Cloud-Internet-Services-Security-Groups/blob/main/Images/nodosk8s.png"></p>
+<br />
 
 ## Referencias :mag:
 * <a href="https://www.ibm.com/cloud/blog/network-security-groups"> IBM Cloud Security Groups</a>
