@@ -9,6 +9,7 @@ La presente guía esta enfocada en realizar las configuraciones necesarias para 
 1. [Pre-Requisitos](#Pre-Requisitos-pencil)
 2. [Asignación de subdominio](#asignación-de-subdominio)
 3. [Configuración de Security Groups](#configuración-de-security-groups)
+4. [Aplicación de reglas](#aplicación-de-reglas)
 4. [Referencias](#Referencias-mag)
 5. [Autores](#Autores-black_nib)
 <br />
@@ -29,7 +30,7 @@ Ingrese a su instancia de *IBM® Cloud Internet Services* y acceda a la pestaña
 Dé clic en crear y posteriormente active la opción de ```Proxy``` para habilitar el tráfico a través de CIS y aplicar las normas que serán agregadas a los security groups
 
 <br />
-<p align="center"><img width="800" src="https://github.com/emeloibmco/IBM-Cloud-Internet-Services-Security-Groups/blob/main/Images/DNSsubdominio.png"></p>
+<p align="center"><img width="500" src="https://github.com/emeloibmco/IBM-Cloud-Internet-Services-Security-Groups/blob/main/Images/DNSsubdominio.png"></p>
 <br />
 
 ## Configuración de Security Groups
