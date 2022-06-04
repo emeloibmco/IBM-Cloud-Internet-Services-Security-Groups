@@ -30,7 +30,7 @@ Ingrese a su instancia de *IBM® Cloud Internet Services* y acceda a la pestaña
 Dé clic en crear y posteriormente active la opción de ```Proxy``` para habilitar el tráfico a través de CIS y aplicar las normas que serán agregadas a los security groups
 
 <br />
-<img width="300" src="https://github.com/emeloibmco/IBM-Cloud-Internet-Services-Security-Groups/blob/main/Images/DNSsubdominio.png"/>
+<p align="center"><img width="900" src="https://github.com/emeloibmco/IBM-Cloud-Internet-Services-Security-Groups/blob/main/Images/DNSsubdominio.png"></p>
 <br />
 
 ## Configuración de Security Groups
@@ -43,8 +43,8 @@ Ingrese a los security Groups de su cuenta a través del menú desplegable de la
 
  2. En el banner de la izquierda seleccione la pestaña ```Assigned Instances``` y seleccione las interfaces públicas y privadas de los nodos del clúster donde tiene desplegados sus servicios.
 
- <br />
-<p align="center"><img width="900" src="https://github.com/emeloibmco/IBM-Cloud-Internet-Services-Security-Groups/blob/main/Images/asignar-instancias.png"></p>
+<br />
+<img width="600" src="https://github.com/emeloibmco/IBM-Cloud-Internet-Services-Security-Groups/blob/main/Images/asignar-instancias.png"/>
 <br />
 
  3. Ingrese a <a href="https://api.cis.cloud.ibm.com/v1/ips"> https://api.cis.cloud.ibm.com/v1/ips</a> estas IPs se usarán en el próximo numeral.
