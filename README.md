@@ -46,6 +46,9 @@ Ingrese a los security Groups de su cuenta a través del menú desplegable de la
 <br />
 <img align="center" width="600" src="https://github.com/emeloibmco/IBM-Cloud-Internet-Services-Security-Groups/blob/main/Images/asignar-instancias.png"/>
 <br />
+<br />
+<p align="center"><img width="600" src="https://github.com/emeloibmco/IBM-Cloud-Internet-Services-Security-Groups/blob/main/Images/asignar-instancias.png"></p>
+<br />
 
  3. Ingrese a <a href="https://api.cis.cloud.ibm.com/v1/ips"> https://api.cis.cloud.ibm.com/v1/ips</a> estas IPs se usarán en el próximo numeral.
 
