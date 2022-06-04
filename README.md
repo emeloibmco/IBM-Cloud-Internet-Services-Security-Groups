@@ -15,7 +15,7 @@ La presente guía esta enfocada en realizar las configuraciones necesarias para 
 
 ## Pre-Requisitos :pencil:
 * Contar con una instancia de <a href="https://cloud.ibm.com/catalog/services/internet-services"> IBM Cloud Internet Services </a> con un dominio asignado.
-* Contar con un servicio de kubernetes desplegado en una IP en un servidor de infraestructura clásica.
+* Contar con un servicio de kubernetes desplegado en un servidor de infraestructura clásica.
 <br />
 
 ## Asignación de subdominio
@@ -29,7 +29,7 @@ Ingrese a su instancia de *IBM® Cloud Internet Services* y acceda a la pestaña
 Dé clic en crear y posteriormente active la opción de ```Proxy``` para habilitar el tráfico a través de CIS y aplicar las normas que serán agregadas a los security groups
 
 <br />
-<p align="center"><img width="900" src="https://github.com/emeloibmco/IBM-Cloud-Internet-Services-Security-Groups/blob/main/Images/DNSsubdominio.png"></p>
+<p align="center"><img width="800" src="https://github.com/emeloibmco/IBM-Cloud-Internet-Services-Security-Groups/blob/main/Images/DNSsubdominio.png"></p>
 <br />
 
 ## Configuración de Security Groups
@@ -56,6 +56,8 @@ Ingrese a los security Groups de su cuenta a través del menú desplegable de la
     * ```Source type```: CIDR Block
     * ```Source```: Ingrese la IP correspondiente
     </br>
+
+    Para cada IP repita el procedimiento con el rango de puertos ```8080 - 8080```
 
  **Security Group para tráfico de entrada de kubernetes**
  
@@ -100,7 +102,9 @@ Ingrese a los security Groups de su cuenta a través del menú desplegable de la
     * ```Destination```: ::/0
     </br>
 
+## Aplicación de reglas
 
+Finalmente, para aplicar las reglas establecidas en los security groups, ingrese al menú desplegable de la izquierda y acceda a su clúster de kubernetes, en el menú de la izquierda dé clic en ```Worker Nodes``` y seleccione todos los nodos de su clúster, finalmente, dé clic en ```Reboot``` para reiniciar los nodos del clúster y aplicar las reglas incluidas en los security groups.
 
 
 ## Referencias :mag:
